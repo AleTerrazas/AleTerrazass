@@ -1,0 +1,86 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+ul {
+  margin: 0;
+  padding-inline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behaviour: auto !important;
+  }
+}
+
+/* Variables */
+:root {
+  --font-sans: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  /* --size-outline: 3px; // Esto es para cambiar el outline del helper */
+}
+
+/* Base */
+body {
+  font-family: var(--font-sans);
+}
+/* Layout */
+.navegacion{
+  height:100px;
+  border:2px solid;
+}
+.navegacion ul{
+  height: inherit;
+  background-color:rgb(73, 147, 197);
+  border: 2px solid black;
+  width: max-content;
+  height: auto;
+  margin: auto;
+}
+.navegacion ul li{  /*Poner mi texto en horizontal*/
+  display:inline;
+  padding-inline: 20px; /*Espacio para mis textos en horizontal*/
+}
+/* Componentes */
+
+/* Utilidades */
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
